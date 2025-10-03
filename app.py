@@ -6,7 +6,7 @@ import time
 import os  # 🆕 IMPORTANTE: agregar este import
 
 # 🆕 URL dinámica para producción
-BACKEND_URL = os.environ.get("BACKEND_URL", "http://localhost:8000")
+BACKEND_URL = "https://mi-asistente-backend.onrender.com"
 
 # Configuración de página
 st.set_page_config(
@@ -426,4 +426,5 @@ with tab3:
                 except Exception as e:
                     st.error(f"Error de conexión: {e}")
             else:
+
                 st.warning("Por favor ingresa al menos un título para el recordatorio")

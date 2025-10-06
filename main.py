@@ -63,13 +63,6 @@ if TELEGRAM_CHAT_ID:
     print(f"Chat ID: {TELEGRAM_CHAT_ID}")
 print("===============================")
 
-# 🆕 SI NO SE CARGAN, USAR VALORES DIRECTOS TEMPORALMENTE
-if not TELEGRAM_BOT_TOKEN or not TELEGRAM_CHAT_ID:
-    print("⚠️  Usando valores directos para Telegram...")
-    TELEGRAM_BOT_TOKEN = "8289894192:AAGyCx4goxHsIRPfp0-RPn0GbjCcitMReSQ"
-    TELEGRAM_CHAT_ID = "1000810125"
-    print("✅ Valores directos configurados")
-
 # 🆕 PROBAR CONEXIÓN CON TELEGRAM AL INICIAR
 async def test_telegram_connection():
     """Probar la conexión con Telegram al iniciar la aplicación"""
@@ -1226,3 +1219,4 @@ if __name__ == "__main__":
     port = int(os.environ.get("PORT", 8000))
 
     uvicorn.run(app, host="0.0.0.0", port=port)
+
